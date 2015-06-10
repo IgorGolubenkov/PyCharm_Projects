@@ -1,11 +1,14 @@
 __author__ = 'user'
 
-from geom2d.point import *
+from geom2d.point import Point
 
-l1 = [Point(3, 1), Point(0, 0), Point(1, 2)]
+l = [Point(i, i*i) for i in range(-5, 6)]
+
+l2 = [ ]
+
+for el in l:
+    l2.append(Point(el.x, -el.y))
 
 
-l2 = sorted(l1, cmp=lambda p1, p2: cmp=(p1.y, p2.y))
-
-print(l1)
+print(l)
 print(l2)
